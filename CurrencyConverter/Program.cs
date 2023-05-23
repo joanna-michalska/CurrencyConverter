@@ -4,6 +4,7 @@
     {
         static void Main(string[] args)
         {
+            // Initialise the variables
             double amount;
             string fromCurrency, toCurrency;
             double convertedAmount;
@@ -11,6 +12,7 @@
             Console.WriteLine("Welcome to Currency Converter");
             Console.WriteLine("Supported currencies: PLN, EUR, GBP, USD");
 
+            // Get input from the user
             Console.Write("Enter the amount to convert: ");
             amount = Convert.ToDouble(Console.ReadLine());
 
@@ -20,6 +22,7 @@
             Console.Write("Enter the currency to convert to: ");
             toCurrency = Console.ReadLine().ToUpper();
 
+            // Perform the conversion
             switch (fromCurrency)
             {
                 case "PLN":
@@ -58,6 +61,7 @@
                     return;
             }
 
+            // Write the output to console
             Console.WriteLine("Converted amount: " + convertedAmount.ToString("0.00") + " " + toCurrency);
         }
     }
